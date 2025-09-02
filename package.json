@@ -75,7 +75,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "npx vsce package --no-dependencies",
+    "publish": "npx vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "16.x",
