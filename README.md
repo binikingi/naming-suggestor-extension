@@ -66,8 +66,20 @@ function calculateDiscount(price, discountRate) {
 
 This extension contributes the following settings:
 
+### **API Configuration**
 - `namingSuggestor.openaiApiKey`: Your OpenAI API key
 - `namingSuggestor.model`: OpenAI model to use (gpt-3.5-turbo, gpt-4, gpt-4-turbo)
+
+### **Suggestion Filtering**
+- `namingSuggestor.includeVariables`: Include variable name suggestions (default: true)
+- `namingSuggestor.includeFunctions`: Include function name suggestions (default: true)
+- `namingSuggestor.includeParameters`: Include parameter name suggestions (default: true)
+- `namingSuggestor.includeClasses`: Include class name suggestions (default: true)
+
+### **Behavior Options**
+- `namingSuggestor.customKeybinding`: Custom keybinding (default: "ctrl+shift+r") - **Restart required**
+- `namingSuggestor.autoApply`: Automatically apply first suggestion without picker (default: false)
+- `namingSuggestor.maxSuggestions`: Maximum number of suggestions to show (1-10, default: 5)
 
 ## Known Issues
 

@@ -2,10 +2,14 @@
   "name": "naming-suggestor-extension",
   "displayName": "Naming Suggestor",
   "description": "AI-powered variable and function naming suggestions using OpenAI",
-  "version": "1.0.0",
-  "publisher": "bini",
+  "version": "1.0.1",
+  "publisher": "binikingi",
   "engines": {
     "vscode": "^1.74.0"
+  },
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
   },
   "categories": [
     "Other",
@@ -29,7 +33,6 @@
     "url": "https://github.com/binikingi/naming-suggestor-extension/issues"
   },
   "homepage": "https://github.com/binikingi/naming-suggestor-extension#readme",
-  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -65,6 +68,44 @@
             "gpt-4-turbo"
           ],
           "description": "OpenAI model to use for suggestions"
+        },
+        "namingSuggestor.includeVariables": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include variable name suggestions"
+        },
+        "namingSuggestor.includeFunctions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include function name suggestions"
+        },
+        "namingSuggestor.includeParameters": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include parameter name suggestions"
+        },
+        "namingSuggestor.includeClasses": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include class name suggestions"
+        },
+        "namingSuggestor.customKeybinding": {
+          "type": "string",
+          "default": "ctrl+shift+r",
+          "description": "Custom keybinding for suggestions (restart required)",
+          "markdownDescription": "Custom keybinding format: `ctrl+shift+r`, `cmd+alt+n`, etc. **Requires VS Code restart to take effect**"
+        },
+        "namingSuggestor.autoApply": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically apply the first suggestion without showing picker"
+        },
+        "namingSuggestor.maxSuggestions": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Maximum number of suggestions to show"
         }
       }
     }
